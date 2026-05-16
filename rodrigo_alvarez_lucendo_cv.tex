@@ -1,0 +1,160 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper,left=0.85cm,right=0.85cm,top=0.85cm,bottom=0.75cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{array}
+
+\definecolor{accent}{HTML}{123C55}
+\definecolor{muted}{HTML}{555555}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\arraystretch}{1.08}
+\emergencystretch=1.5em
+
+\titleformat{\section}
+  {\large\bfseries\scshape\color{accent}}
+  {}
+  {0pt}
+  {}
+  [\vspace{0.10em}{\color{accent}\titlerule[0.55pt]}]
+\titlespacing*{\section}{0pt}{0.72em}{0.42em}
+
+\setlist[itemize]{
+  leftmargin=1.15em,
+  label=\raisebox{0.2ex}{\scriptsize$\bullet$},
+  itemsep=0.06em,
+  topsep=0.08em,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+\newlength{\datecol}
+\setlength{\datecol}{2.35cm}
+\newlength{\gapcol}
+\setlength{\gapcol}{0.35cm}
+\newcommand{\entry}[3]{%
+  \noindent
+  \begin{minipage}[t]{\datecol}
+    \vspace{0pt}\raggedright\small\color{muted}#1
+  \end{minipage}%
+  \hspace{\gapcol}%
+  \begin{minipage}[t]{\dimexpr\linewidth-\datecol-\gapcol\relax}
+    \vspace{0pt}\raggedright #2#3
+  \end{minipage}\par\vspace{0.36em}
+}
+
+\newcommand{\role}[2]{%
+  \textbf{#1}\if\relax\detokenize{#2}\relax\else, #2\fi\par
+}
+
+\newcommand{\project}[2]{%
+  \noindent\textbf{#1}: #2\par\vspace{0.10em}
+}
+
+\begin{document}
+\raggedright
+
+{\LARGE\bfseries Rodrigo Alvarez Lucendo}\par
+\vspace{0.25em}
+{\small
+\mbox{+41 77 289 46 00}
+\quad|\quad
+\mbox{\href{mailto:r.alvarezlucendo16@gmail.com}{r.alvarezlucendo16@gmail.com}}
+\quad|\quad
+\mbox{Spanish citizen}
+}
+
+\section{Education}
+\entry{2023--2026}
+{\role{MSc Computer Science}{TU Delft}}
+{%
+  \begin{itemize}
+    \item Expected graduation: August 2026.
+    \item Exchange semester at EPFL (Feb--Jul 2025).
+    \item Courses: Modern NLP, Deep Learning, Graph ML, Deep RL, Computer Vision, Distributed ML Systems.
+  \end{itemize}
+}
+\entry{2019--2023}
+{\role{BSc Computer Science}{TU Delft}}
+{%
+  \begin{itemize}
+    \item Thesis: Deep learning model for algal bloom forecasting using spatiotemporal data on HPC.
+  \end{itemize}
+}
+
+\section{Work Experience}
+\entry{Jun--Present}
+{\role{Machine Learning Engineer}{Xcert.ai}}
+{%
+  \begin{itemize}
+    \item First employee at CHF 1.5M+ startup building AI assistants for aerospace certification.
+    \item Led RAG pipeline development (parsing, chunking, retrieval, and evaluation) as well as the development, 
+    monitoring and evaluation of an agentic workflow created with OpenAI Agent SDK.
+  \end{itemize}
+}
+\entry{Jul 2024--Jan 2025}
+{\role{Data Engineer Intern}{Amazon}}
+{%
+  \begin{itemize}
+    \item Deployed a monitoring tool for machine learning models in production.
+    \item First in team to explore AI agents; built a ReAct agent for natural-language metric analysis.
+    \item Provided BI teams with complex SQL queries and business analysis. 
+  \end{itemize}
+}
+\entry{2022--2024}
+{\role{Teaching Assistant}{TU Delft \& EPFL}}
+{%
+  \begin{itemize}
+    \item Guided 300+ students in BSc/MSc courses (ML, Big Data, Deep Learning); Head TA for Computational Intelligence.
+  \end{itemize}
+}
+
+\section{Research}
+\entry{Feb--Sep 2025}
+{\role{Research Assistant}{Theory of Machine Learning Lab, EPFL}}
+{%
+  \begin{itemize}
+    \item Investigated how Transformers learn high-order Markov chains through staged dynamics.
+  \end{itemize}
+}
+\entry{2025--2026}
+{\role{Master Thesis}{Natural Language Processing Lab, EPFL}}
+{%
+  \begin{itemize}
+    \item Measuring scaling laws for memorization in LLMs across model size and data composition.
+    \item Training GPT-2 models from scratch on synthetic and natural data.
+  \end{itemize}
+}
+
+\section{Projects}
+\project{AI Tutor}{Fine-tuned a 0.6B LLM with SFT and DPO (Hugging Face) to create an AI STEM tutor.}
+\project{nanoGPT}{Built nanoGPT from scratch (decoder-only Transformer, BPE tokenizer) and extended it with MoE.}
+\project{RAG QA}{Analyzed how contextual relevance influences RAG QA system performance.}
+\project{FETCH, EPFL AI Team}{Co-developed a natural-language mission planner for a Unitree Go2 robot using LLMs and live sensor input; integrated Nav2 and MCP servers.}
+
+\section{Publications}
+\textbf{Incremental Learning of Sparse Attention Patterns in Transformers.}
+O\u{g}uz Kaan Y\"uksel, \textbf{Rodrigo Alvarez Lucendo}, Nicolas Flammarion.
+Second author; accepted to ICML 2026 Main Conference (regular accept), attending as author.
+Earlier version at EurIPS 2025 Workshop on Principles of Generative Modeling (PriGM).
+\href{https://arxiv.org/abs/2602.19143}{arXiv:2602.19143}.
+
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}>{\bfseries}p{3.25cm}@{\hspace{0.35cm}}X@{}}
+Languages & Python, Java, SQL, Scala, Bash, TypeScript, English, Spanish.\\
+ML / Deep Tech & PyTorch, Hugging Face, LlamaIndex, PyTorch Lightning, Weights \& Biases.\\
+Systems / Tools & Docker, AWS, Neo4j, Redis, FastAPI, Git, HPC.\\
+Interests & Rowing, alpine skiing, strength training.
+\end{tabularx}
+
+\end{document}

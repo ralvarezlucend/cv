@@ -1,0 +1,30 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.xdv
+
+# Temporary LaTeX files
+*.dvi
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+
+# Generated previews
+*_preview.png
+
+# Editor and OS files
+.DS_Store
+*.swp
+*.swo
+*~
