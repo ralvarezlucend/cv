@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[10pt,a4paper]{article}
 
 \usepackage[a4paper,left=0.85cm,right=0.85cm,top=0.85cm,bottom=0.75cm]{geometry}
 \usepackage[T1]{fontenc}
@@ -27,13 +27,13 @@
   {0pt}
   {}
   [\vspace{0.10em}{\color{accent}\titlerule[0.55pt]}]
-\titlespacing*{\section}{0pt}{0.72em}{0.42em}
+\titlespacing*{\section}{0pt}{0.62em}{0.34em}
 
 \setlist[itemize]{
   leftmargin=1.15em,
   label=\raisebox{0.2ex}{\scriptsize$\bullet$},
-  itemsep=0.06em,
-  topsep=0.08em,
+  itemsep=0.03em,
+  topsep=0.05em,
   parsep=0pt,
   partopsep=0pt
 }
@@ -50,65 +50,59 @@
   \hspace{\gapcol}%
   \begin{minipage}[t]{\dimexpr\linewidth-\datecol-\gapcol\relax}
     \vspace{0pt}\raggedright #2#3
-  \end{minipage}\par\vspace{0.36em}
+  \end{minipage}\par\vspace{0.28em}
 }
 
 \newcommand{\role}[2]{%
   \textbf{#1}\if\relax\detokenize{#2}\relax\else, #2\fi\par
 }
 
-\newcommand{\project}[2]{%
-  \noindent\textbf{#1}: #2\par\vspace{0.10em}
-}
-
 \begin{document}
 \raggedright
 
 {\LARGE\bfseries Rodrigo Alvarez Lucendo}\par
-\vspace{0.25em}
+\vspace{0.08em}
+{\normalsize\bfseries\color{accent}AI Engineer - EPFL \& TU Delft}\par
+\vspace{0.20em}
 {\small
 \mbox{+41 77 289 46 00}
 \quad|\quad
 \mbox{\href{mailto:r.alvarezlucendo16@gmail.com}{r.alvarezlucendo16@gmail.com}}
 \quad|\quad
-\mbox{Spanish citizen}
+\mbox{Lausanne, 1007 Vaud}
 }
 
-\section{Education}
-\entry{2023--2026}
-{\role{MSc Computer Science}{TU Delft}}
-{%
-  \begin{itemize}
-    \item Expected graduation: August 2026.
-    \item Exchange semester at EPFL (Feb--Jul 2025).
-    \item Courses: Modern NLP, Deep Learning, Graph ML, Deep RL, Computer Vision, Distributed ML Systems.
-  \end{itemize}
-}
-\entry{2019--2023}
-{\role{BSc Computer Science}{TU Delft}}
-{%
-  \begin{itemize}
-    \item Thesis: Deep learning model for algal bloom forecasting using spatiotemporal data on HPC.
-  \end{itemize}
-}
+\section{Professional Summary}
+AI engineer passionate about turning cutting-edge research into reliable systems, trained at TU Delft and EPFL and experienced at Amazon and an early-stage aerospace AI startup. Second author of an ICML 2026 paper on Transformer learning dynamics, presented at one of the world's leading AI conferences.
 
 \section{Work Experience}
-\entry{Jun--Present}
-{\role{Machine Learning Engineer}{Xcert.ai}}
+\entry{Jun 2025--Present}
+{\role{AI \& Machine Learning Engineer}{Xcert.ai}}
 {%
   \begin{itemize}
-    \item First employee at CHF 1.5M+ startup building AI assistants for aerospace certification.
-    \item Led RAG pipeline development (parsing, chunking, retrieval, and evaluation) as well as the development, 
-    monitoring and evaluation of an agentic workflow created with OpenAI Agent SDK.
+    \item First employee at a CHF 1.5M+ pre-seed startup building AI assistants for aerospace certification.
+    \item Led the development, monitoring, and evaluation of an agentic workflow using the OpenAI Agent SDK.
+    \item Co-created the first aerospace LLM benchmark to evaluate domain-specific model performance.
+    \item Led technical customer communication with the European Space Agency (ESA).
+  \end{itemize}
+}
+\entry{Feb--Jul 2025}
+{\role{Selected AI Projects}{EPFL}}
+{%
+  \begin{itemize}
+    \item \textbf{AI Tutor:} Fine-tuned a 0.6B LLM with SFT and DPO to create an AI STEM tutor.
+    \item \textbf{nanoGPT:} Built a decoder-only Transformer and BPE tokenizer from scratch, then extended it with MoE.
+    \item \textbf{RAG QA:} Analyzed how contextual relevance influences question-answering performance.
+    \item \textbf{FETCH, EPFL AI Team:} Co-developed an LLM-based mission planner for a Unitree Go2 robot using live sensor input, Nav2, and MCP servers.
   \end{itemize}
 }
 \entry{Jul 2024--Jan 2025}
-{\role{Data Engineer Intern}{Amazon}}
+{\role{Data Engineer}{Amazon \textcolor{muted}{\small (Internship)}}}
 {%
   \begin{itemize}
     \item Deployed a monitoring tool for machine learning models in production.
-    \item First in team to explore AI agents; built a ReAct agent for natural-language metric analysis.
-    \item Provided BI teams with complex SQL queries and business analysis. 
+    \item Pioneered the team's exploration of AI agents by building a ReAct agent for natural-language metric analysis.
+    \item Delivered complex SQL queries and business analysis for BI teams.
   \end{itemize}
 }
 \entry{2022--2024}
@@ -119,41 +113,50 @@
   \end{itemize}
 }
 
+\section{Education}
+\entry{2023--May 2026}
+{\role{MSc Computer Science (AI \& ML focus)}{TU Delft \& EPFL}}
+{%
+  \begin{itemize}
+    \item Coursework: Modern NLP, Deep Learning, Graph ML, Deep RL, Computer Vision, Distributed ML Systems.
+  \end{itemize}
+}
+\entry{2019--2023}
+{\role{BSc Computer Science}{TU Delft}}
+{%
+  \begin{itemize}
+    \item Thesis: Deep learning model for algal bloom forecasting using spatiotemporal data on HPC.
+  \end{itemize}
+}
+
 \section{Research}
 \entry{Feb--Sep 2025}
 {\role{Research Assistant}{Theory of Machine Learning Lab, EPFL}}
 {%
   \begin{itemize}
-    \item Investigated how Transformers learn high-order Markov chains through staged dynamics.
+    \item Investigated how Transformers learn high-order Markov chains through staged dynamics; work accepted at the ICML 2026 Main Conference.
   \end{itemize}
 }
 \entry{2025--2026}
 {\role{Master Thesis}{Natural Language Processing Lab, EPFL}}
 {%
   \begin{itemize}
-    \item Measuring scaling laws for memorization in LLMs across model size and data composition.
-    \item Training GPT-2 models from scratch on synthetic and natural data.
+    \item Proposed a framework for understanding why Transformer-based models preferentially memorize certain data types; preparing submissions to the NeurIPS 2026 Workshop and ICLR 2027 Main Conference.
   \end{itemize}
 }
 
-\section{Projects}
-\project{AI Tutor}{Fine-tuned a 0.6B LLM with SFT and DPO (Hugging Face) to create an AI STEM tutor.}
-\project{nanoGPT}{Built nanoGPT from scratch (decoder-only Transformer, BPE tokenizer) and extended it with MoE.}
-\project{RAG QA}{Analyzed how contextual relevance influences RAG QA system performance.}
-\project{FETCH, EPFL AI Team}{Co-developed a natural-language mission planner for a Unitree Go2 robot using LLMs and live sensor input; integrated Nav2 and MCP servers.}
-
-\section{Publications}
+\section{Publication}
 \textbf{Incremental Learning of Sparse Attention Patterns in Transformers.}
 O\u{g}uz Kaan Y\"uksel, \textbf{Rodrigo Alvarez Lucendo}, Nicolas Flammarion.
-Second author; accepted to ICML 2026 Main Conference (regular accept), attending as author.
+Second author; presented at the ICML 2026 Main Conference (regular acceptance).
 Earlier version at EurIPS 2025 Workshop on Principles of Generative Modeling (PriGM).
 \href{https://arxiv.org/abs/2602.19143}{arXiv:2602.19143}.
 
 \section{Skills}
 \begin{tabularx}{\linewidth}{@{}>{\bfseries}p{3.25cm}@{\hspace{0.35cm}}X@{}}
 Languages & Python, Java, SQL, Scala, Bash, TypeScript, English, Spanish.\\
-ML / Deep Tech & PyTorch, Hugging Face, LlamaIndex, PyTorch Lightning, Weights \& Biases.\\
-Systems / Tools & Docker, AWS, Neo4j, Redis, FastAPI, Git, HPC.\\
+ML / Deep Tech & PyTorch, Hugging Face, OpenAI Agent SDK, PyTorch Lightning, Weights \& Biases.\\
+Systems / Tools & Docker, Kubernetes, AWS, Neo4j, Postgres, FastAPI, Git, HPC.\\
 Interests & Rowing, alpine skiing, strength training.
 \end{tabularx}
 
